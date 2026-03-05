@@ -1,0 +1,13 @@
+services:
+  mongodb:
+    image: mongo:5.0
+    container_name: saqib-thinks-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=saqib_thinks
+
+volumes:
+  mongodb_data:
